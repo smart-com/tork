@@ -1,16 +1,10 @@
-# humanstxt.org/
-# The humans responsible & technology colophon
+## Tork
 
-# TEAM
-
-	<name> -- <role> -- <twitter>
-
-# THANKS
-
-	<name>
+It's my first Bootstrap template
 
 # TECHNOLOGY COLOPHON
 
 	HTML5, CSS3
-	jQuery, Modernizr
+	Bootstrap
+
 

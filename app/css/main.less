@@ -1,0 +1,686 @@
+@import url( https://fonts.googleapis.com/css?family=Open+Sans:400,300 );
+// Fonts
+@open-sans: 'Open Sans', sans-serif;
+// Font Family
+@base-font-family: @open-sans;
+// Font Size
+@base-font-size: 14px;
+// Font Weight
+@font-thin: 100;
+@font-extra-light: 200;
+@font-light: 300;
+@font-normal: 400;
+@font-medium: 500;
+@font-semi-bold: 600;
+@font-bold: 700;
+@font-extra-bold: 800;
+@font-ultra-bold: 900;
+// Sizes
+@btn-height: 45px;
+// Media Queries
+@mobile: 480px;
+@tablet: 768px;
+@desktop: 992px;
+@large: 1700px;
+// Color
+@darkest-color: #1a2124;
+@darker-color: #232323;
+@header-bg: #232831;
+@input-bg: #343c48;
+@dark-font: #2b303b;
+@medium-font: #44484f;
+@light-font: #696f7c;
+@lighter-color: #83969f;
+@input-font-color: #9da5b0;
+@buy-color: #835fa8;
+@see-more-color: #3dd2ae;
+@light-bg: #f4f8fb;
+@lighter-font: #f6f7fa;
+@connectivity-bg: #e9eef1;
+@lightest-color: #fff;
+@span-color: #3a4d60;
+// Border
+@border-radius: 24px;
+// Shadows
+@box-shadow: 0px 1px 0px 0.00px rgba(255,255,255,0.5);
+
+* {
+	//outline: 5px solid grey;
+}
+
+body {
+	font-family: @base-font-family;
+	background: url( ../img/bulletproof.png ) no-repeat;
+	background-color: @header-bg;
+}
+
+.buttons {
+	margin-top: @btn-height;
+	margin-bottom: @btn-height;
+	// Высота кнопки
+	line-height: @btn-height;
+	border-radius: @border-radius;
+	box-shadow: @box-shadow;
+
+	@media( max-width: @mobile ) {
+		margin-top: @btn-height / 4;
+	}
+
+	a {
+		display: block;
+		text-align: center;
+		color: @lightest-color;
+		font-weight: @font-semi-bold;
+	}
+}
+
+.see-more {
+	background-color: @see-more-color;
+	width: 160px;
+	margin-top: @btn-height;
+
+	@media ( max-width: @mobile ) {
+		width: 120px;
+	}
+}
+.blaz {
+	background: url( "../img/blaz.png" ) no-repeat;
+	height: 60px;
+	line-height: 60px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding-left: 70px;
+	font-size: 15px;
+}
+.first {
+	margin: 0;
+	.logo {
+		// Картинка по центру ячейки
+		text-align: center;
+		height: 80px;
+		// Отступ сверху
+		margin-top: @btn-height / 2;
+	}
+	.search {
+		margin-top: @btn-height;
+		height: @btn-height;
+		padding: 0;
+		input[ type="search" ] {
+			height: 100%;
+			width: 100%;
+			// Размещаем иконку с сабмитом
+			margin-right: -18%;
+			// Отодвигаем текст
+			padding-left: 8%;
+			outline: none;
+			border: none;
+			color: @input-font-color;
+			background-color: @input-bg;
+			border-radius: @border-radius;
+			box-shadow: @box-shadow;
+
+			@media ( max-width: @mobile ) {
+				font-size: @base-font-size + 2;
+				margin-right: -15%;
+			}
+
+			@media ( min-width: @mobile ) and ( max-width: @desktop ) {
+				font-size: @base-font-size - 1;
+				margin-right: -20%;
+			}
+		}
+		input[ type="submit" ] {
+			border: none;
+			outline: none;
+			background: url( ../img/fa-search.png ) no-repeat;
+			width: 15px;
+			height: 15px;
+		}
+	}
+	.buy {
+		margin-top: @btn-height;
+		background-color: @buy-color;
+		box-shadow: @box-shadow;
+		width: fit-content;
+	}
+
+	.menu {
+		height: @btn-height;
+		width: @btn-height;
+		margin-top: @btn-height;
+		background: url( ../img/fa-bars.png ) no-repeat;
+		background-position: center;
+	}
+
+	.first-header {
+		color: @lightest-color;
+		margin-top: 27vh;
+		margin-bottom: 10vh;
+
+		@media ( max-width: @mobile ) {
+			text-align: center;
+			font-weight: @font-bold;
+		}
+
+		@media ( max-width: @tablet ) {
+			margin-top: 20vh;
+			margin-bottom: 5vh;
+		}
+
+		h1 {
+			font-size: 70px;
+			font-weight: @font-light;
+
+			@media ( max-width: @tablet ) {
+				font-size: 30px;
+				font-weight: inherit;
+			}
+
+			@media ( min-width: @tablet ) and ( max-width: @desktop ) {
+				font-size: 35px;
+				font-weight: inherit;
+			}
+
+			@media ( min-width: @desktop ) and (max-width: @large ) {
+				font-size: 55px;
+			}
+		}
+
+		h2 {
+			margin-top: 40px;
+			line-height: 1.5;
+			letter-spacing: 1px;
+			font-size: 20px;
+		}
+	}
+}
+
+.second {
+	background-color: @buy-color;
+
+	@media ( max-width: @mobile ) {
+		text-align: center;
+	}
+
+	.second-header {
+		margin-top: @btn-height;
+		color: @lightest-color;
+
+		@media ( max-width: @tablet ) {
+			text-align: center
+		}
+
+		h2 {
+			font-size: 40px;
+			margin-bottom: 50px;
+			font-weight: @font-light;
+		}
+
+		h3 {
+			font-size: 16px;
+			letter-spacing: 1px;
+			font-weight: @font-normal;
+		}
+	}
+	.second-phones {
+		overflow: hidden;
+
+		@media ( max-width: @mobile ) {
+			height: 130px;
+		}
+
+		@media ( min-width: @mobile) and ( max-width: @tablet) {
+			height: 200px;
+
+		}
+
+		@media ( min-width: @tablet ) {
+			margin-top: -50px;
+			height: 500px;
+			padding-top: 115px;
+		}
+
+		@media ( min-width: @large ) {
+			margin-top: -100px;
+			padding-top: 110px;
+			height: 600px;
+		}
+
+		.interface {
+			@media ( min-width: @tablet ) {
+				margin-top: 100px;
+			}
+			@media ( min-width: @large ) {
+				width: 300px;
+			}
+		}
+
+		.phone {
+			@media ( min-width: @mobile ) and ( max-width: @tablet ) {
+				width: 200px;
+				margin-left: -300px;
+			}
+
+			@media ( min-width: @tablet ) {
+				margin-left: -100px;
+				width: 200px;
+			}
+
+			@media ( min-width: @desktop ) {
+				width: 350px;
+				margin-left: -200px;
+				margin-top: -100px;
+			}
+
+			@media ( min-width: @large ) {
+				width: 400px;
+				margin-left: -50px;
+				margin-top: -120px;
+			}
+		}
+	}
+}
+
+.third {
+	background-color: @light-bg;
+	.third-news {
+
+		.third-header {
+			line-height: 1.8;
+			font-size: 30px;
+			font-weight: @font-light;
+			color: @dark-font;
+		}
+
+		.description {
+			font-size: 20px;
+			line-height: 1.5;
+			color: @light-font;
+		}
+
+		.text {
+			color: @medium-font;
+			font-size: 14px;
+			line-height: 1.5;
+		}
+	}
+
+	&:after {
+		content: url( ../img/pimp.png );
+		position: relative;
+		top: 31px;
+		left: 40%;
+
+		@media ( max-width: @mobile ) {
+			left: 32%;
+		}
+
+		@media ( min-width: @tablet ) {
+			left: 43%;
+		}
+
+		@media ( min-width: @desktop ) {
+			left: 45%;
+		}
+	}
+}
+
+.fourth {
+	text-align: center;
+	margin-top: 100px;
+
+	@media ( max-width: @tablet ) {
+		padding-bottom: @btn-height;
+	}
+	h2 {
+		color: @lightest-color;
+		font-size: 40px;
+		font-weight: @font-light;
+		line-height: 1.4;
+	}
+	h3 {
+		font-size: 16px;
+		color: @input-font-color;
+		padding: 10px;
+
+		@media (min-width: @tablet ) {
+			margin-bottom: 50px;
+		}
+	}
+	.humans-img {
+		background: url( ../img/humans.png ) no-repeat;
+		background-position: top middle;
+		background-size: cover;
+
+		@media (min-width: @tablet ) {
+			height: 300px;
+		}
+
+		.design-win {
+			height: 60px;
+			line-height: 60px;
+			margin-top: 130px;
+			border: 1px solid @lightest-color;
+
+			a {
+				display: block;
+				font: 25px;
+				color: @lightest-color;
+			}
+		}
+	}
+}
+.fifth {
+	background-color: @dark-font;
+
+	.fifth-news {
+		margin-top: 60px;
+		margin-bottom: 60px;
+		color: @lightest-color;
+
+		@media ( max-width: @desktop ) {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		.ico {
+			height: 46px;
+			width: 46px;
+		}
+
+		h3 {
+			span {
+				color: @span-color;
+			}
+		}
+
+		p {
+			color: @input-font-color;
+		}
+	}
+
+	.design {
+		.design-icon {
+			background: url( ../img/design.png );
+		}
+	}
+
+	.refinement {
+		.refinement-icon {
+			background: url( ../img/refinement.png );
+		}
+	}
+
+	.dive-in {
+		.dive-in-icon {
+			background: url( ../img/dive.png );
+		}
+	}
+
+	.research {
+		.research-icon {
+			background: url( ../img/research.png );
+		}
+	}
+}
+
+.sixth {
+	background-color: @connectivity-bg;
+	height: 300px;
+	min-height: fit-content;
+
+	.connectivity {
+		margin-top: 60px;
+
+		@media ( max-width: @desktop ) {
+			margin-top: 20px;
+		}
+
+		h2 {
+			background: url( ../img/connectivity.png ) no-repeat 0 0;
+			background-size: contain;
+			margin-bottom: 40px;
+			padding-left: 90px;
+			height: 55px;
+			color: @dark-font;
+			font-size: 40px;
+			font-weight: @font-light;
+			line-height: 55px;
+
+			@media ( min-width: @tablet ) {
+				font-size: 23px;
+			}
+		}
+
+		.description {
+			color: @light-font;
+			line-height: 1.5;
+			font-weight: @font-light;
+			font-size: 20px;
+			margin-bottom: 40px;
+
+			@media ( min-width: @tablet ) and ( max-width: @desktop ) {
+				margin-bottom: 20px;
+				font-size: 16px;
+			}
+		}
+
+		.text {
+			color: @medium-font;
+			margin-bottom: 40px;
+		}
+	}
+	.connectivity-img {
+		height: 530px;
+		background: url( ../img/clock.png ) no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+}
+
+.seventh {
+	background-color: @lightest-color;
+	background-position: center;
+
+	.june-image {
+		background: url( ../img/texture.png ) no-repeat;
+		background-size: cover;
+		background-position: center;
+		min-height: 490px;
+		height: 400px;
+
+		.play-btn {
+			background: @dark-font url(../img/triangle.png) no-repeat;
+			background-position: center;
+			background-size: 10px 12px;
+			width: 85px;
+			height: 55px;
+			margin-top: 190px;
+
+			a {
+				display: block;
+				font: 25px;
+				color: @lightest-color;
+			}
+		}
+	}
+
+	.june {
+		color: @lightest-color;
+		background-color: @buy-color;
+		min-height: 490px;
+		height: 400px;
+
+		@media ( max-width: @tablet ) {
+			height: 550px;
+		}
+
+		.date {
+			margin-top: 70px;
+			font-size: 12px;
+		}
+
+		.text {
+			font-style: italic;
+			font-size: 32px;
+
+			@media ( min-width: @tablet ) {
+				font-size: 28px;
+			}
+		}
+	}
+}
+
+.eight {
+	background-color: @lightest-color;
+	height: 390px;
+
+	.lorem {
+		h2 {
+			// Ширина текста в левом блоке
+			width: 80%;
+			margin-top: @btn-height * 2;
+			font-size: 23px;
+			font-weight: @font-light;
+			color: @darker-color;
+
+			@media ( max-width: @tablet ) {
+				margin-top: @btn-height;
+			}
+		}
+
+		.description {
+			width: 80%;
+			color: @lighter-color;
+			font-size: 14px;
+			font-weight: @font-normal;
+			line-height: 1.5;
+		}
+
+		.comments {
+			font-size: 12px;
+			font-weight: @font-semi-bold;
+			color: @lighter-color;
+			span {
+				font-size: 30px;
+				font-weight: @font-light;
+				color: @lighter-color;
+			}
+		}
+	}
+
+	.eight-img {
+		background: url( ../img/phones.png ) no-repeat;
+		background-size: cover;
+		background-position: center;
+		height: 100%;
+	}
+}
+
+.nineth {
+	background: url(../img/big-photo.png);
+	background-size: cover;
+	height: 700px;
+
+	@media ( max-width: @mobile ) {
+		height: 400px;
+	}
+
+	.blaz-block {
+		color: @lightest-color;
+		background-color: @buy-color;
+
+		.text {
+			margin-top: 60px;
+			font-style: italic;
+			font-size: 32px;
+			@media ( max-width: @desktop ) {
+				font-size: 25px;
+			}
+		}
+	}
+}
+
+.tenth {
+	background-color: #1a2124;
+	color: @lighter-font;
+	height: 550px;
+	.get-in-touch {
+		h3 {
+			font-size: 13px;
+			font-weight: @font-semi-bold;
+			line-height: 24px;
+			margin-bottom: 20px;
+		}
+		.description {
+			font: @font-light;
+			font-size: 13px;
+			line-height: 24px;
+
+			@media ( max-width: @tablet ) {
+				margin-bottom: @btn-height;
+			}
+		}
+		.list {
+			ul {
+				padding-bottom: @btn-height;
+				li {
+					list-style-type: none;
+					margin-left: -40px;
+					a {
+						color: @lighter-font;
+						line-height: 24px;
+					}
+				}
+			}
+		}
+	}
+
+	.stay-in-touch {
+		h3 {
+			font-size: 13px;
+			font-weight: @font-semi-bold;
+			line-height: 24px;
+			margin-bottom: 20px;
+		}
+
+		.form-in-footer {
+			font-size: 18px;
+			font-weight: @font-extra-bold;
+			height: 60px;
+			padding: 0;
+
+			input[ type="search" ] {
+				height: 100%;
+				width: 100%;
+				// Размещаем иконку с сабмитом
+				margin-right: -75px;
+				// Отодвигаем текст
+				padding-left: 5%;
+				color: @dark-font;
+				background-color: @lighter-font;
+				outline: none;
+				border: none;
+				// Один пиксель белый
+				border-radius: 2px;
+
+				@media ( max-width: @mobile ) {
+					font-size: @base-font-size + 2;
+					margin-right: -75px;
+				}
+
+				@media ( min-width: @mobile ) and ( max-width: @desktop ) {
+					margin-right: -75px;
+				}
+			}
+			input[ type="submit" ] {
+				border: none;
+				outline: none;
+				background: @buy-color;
+				width: 70px;
+				height: 60px;
+				border-radius: 2px;
+			}
+		}
+	}
+}
