@@ -1,10 +1,11 @@
-## Tork
-
+Tork
+=================================================
 It's my first Bootstrap template
 
-# TECHNOLOGY COLOPHON
+[Demo](http://htmlpreview.github.io/?https://github.com/smart-com/tork/blob/master/index.html)
 
-	HTML5, CSS3
-	Bootstrap
+> **Used technology**
+* HTML5, CSS3
+* Bootstrap
 
 
